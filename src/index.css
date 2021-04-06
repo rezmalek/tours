@@ -137,6 +137,7 @@ p {
   cursor: pointer;
   margin-top: 2rem;
   font-size: 1.2rem;
+  outline: none;
 }
 
 /* tours */
@@ -194,6 +195,7 @@ main {
   font-size: 1rem;
   cursor: pointer;
   padding-left: 0.25rem;
+  outline: none;
 }
 .tour-price {
   color: var(--clr-primary-5);
