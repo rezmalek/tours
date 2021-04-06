@@ -12,8 +12,8 @@ function App() {
   // remove tour function
   const removeTour = (id) => {
     const newTours = tours.filter((tour) => tour.id !== id);
-    setTours(newTours)
-  }
+    setTours(newTours);
+  };
 
   // fetch tours api
   const getTours = async () => {
@@ -44,10 +44,23 @@ function App() {
     );
   }
 
+  // refresh the tour list
+  if (tours.length === 0) {
+    return (
+      <main>
+        <div className='title'>
+          <h1>no tours available</h1>
+          <button className='btn' onClick={() => getTours()}>
+            refresh
+          </button>
+        </div>
+      </main>
+    );
+  }
   // tours
   return (
     <main>
-      <Tours tours={tours} removeTour={removeTour}/>
+      <Tours tours={tours} removeTour={removeTour} />
     </main>
   );
 }
